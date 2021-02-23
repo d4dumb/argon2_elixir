@@ -55,6 +55,10 @@ else
 	ifeq ($(KERNEL_NAME), $(filter $(KERNEL_NAME),OpenBSD FreeBSD NetBSD))
 		LIB_CFLAGS := -shared -fPIC
 	endif
+	ifeq ($(findstring MINGW, $(KERNEL_NAME)), MSYS)
+		LIB_NAME = $(PRIV_DIR)/argon2_nif.dll
+		LIB_CFLAGS := -shared
+	endif
 endif
 
 calling_from_make:
