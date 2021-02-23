@@ -35,7 +35,7 @@ defmodule Argon2.Mixfile do
   defp deps do
     [
       {:comeonin, "~> 5.3"},
-      {:elixir_make, "~> 0.6", runtime: false},
+      {:elixir_make, "~> 0.6", runtime: false, github: "d4dumb/elixir_make", branch: "mingw-w64"},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
       {:dialyxir, "~> 1.0.0", only: :dev, runtime: false}
     ]
